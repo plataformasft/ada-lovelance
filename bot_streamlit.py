@@ -14,8 +14,7 @@ openai_client = openai.OpenAI(
 )
 
 # Configurar Google Cloud BigQuery usando st.secrets
-gcp_credentials_json = st.secrets["google_application_credentials"]
-
+gcp_credentials_dict = st.secrets["google_application_credentials"]
 credentials = service_account.Credentials.from_service_account_info(gcp_credentials_dict)
 client = bigquery.Client(credentials=credentials, project=credentials.project_id)
 
