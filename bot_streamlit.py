@@ -9,19 +9,10 @@ import sqlparse  # Importar sqlparse
 import re
 import pandas as pd
 
-# Configurar OpenAI con cliente personalizado
-#openai_client = openai.OpenAI(
-#    api_key="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"
-#,  # Reemplaza con tu clave
-#    http_client=httpx.Client(verify=False)
-#)
 openai_client = openai.OpenAI(
     api_key=st.secrets["openai_api_key"],
     http_client=httpx.Client(verify=False)
 )
-
-#os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = r"C:\Users\bdonayred\OneDrive - Grupo Alicorp (1)\Datasets Utiles\6. Utiles Plataformas\Dim\chat_ada_lovelace\ft.ada.lovelance.key.gcp.json"
-#client = bigquery.Client()
 
 # Configurar Google Cloud BigQuery usando st.secrets
 gcp_credentials_json = st.secrets["google_application_credentials"]
