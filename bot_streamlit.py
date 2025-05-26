@@ -10,8 +10,7 @@ import re
 import pandas as pd
 
 openai_client = openai.OpenAI(
-    api_key=st.secrets["openai_api_key"],
-    http_client=httpx.Client(verify=False)
+    api_key=st.secrets["openai_api_key"]
 )
 
 # Configurar Google Cloud BigQuery usando st.secrets
