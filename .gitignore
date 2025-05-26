@@ -1,0 +1,15 @@
+# Ignorar credenciales y secretos
+secrets.toml
+*.json
+.env
+
+# Ignorar configuraciones del entorno
+__pycache__/
+*.pyc
+.vscode/
+.idea/
+.DS_Store
+
+# Ignorar archivos del sistema y temporales
+Thumbs.db
+desktop.ini
